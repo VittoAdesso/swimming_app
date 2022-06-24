@@ -21,4 +21,4 @@ let userSchema = new Schema({
 //Le indicamos a través del campo unique en el Schema que nos lo valide gracias al plugin 
 //instalado y su mensaje al matchearlo si existiera
 userSchema.plugin(uniqueValidator, { message: 'Email already in use.' });
-module.exports = mongoose.model('User', userSchema); //Exportamos el esquema
+module.exports = mongoose.model('User', userSchema); //export schema
