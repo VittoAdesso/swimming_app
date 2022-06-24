@@ -25,7 +25,7 @@ app.use('/public', express.static('public'));
 
 app.use('/api', api)
 
-// Definimos el puerto desde el dotenv y si no lo hubiera el 4000
+// Definimos el puerto desde el dotenv y si no lo hubiera el 5000
 const port = process.env.PORT || 5000;
 const server = app.listen(port, () => {
     console.log('Connected to port ' + port)
