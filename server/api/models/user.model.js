@@ -2,14 +2,14 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 const uniqueValidator = require('mongoose-unique-validator');
 
-//Definimos el equema de nuestro usuario
+//Define user model or shema
 let userSchema = new Schema({
     name: {
         type: String
     },
     email: {
         type: String,
-        unique: true //En este campo indicamos que solo puede haber un usuario con un e-mail único
+        unique: true //I want an unique e mail is true
     },
     password: {
         type: String

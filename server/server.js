@@ -4,15 +4,15 @@ const mongoose = require('mongoose');
 const cors = require('cors');
 const bodyParser = require('body-parser');
 
-//Importamos la conexion a la db
+//Import connection to db
 const { connect } = require("./api/utils/database/connect");
 
 // Express APIs
 const api = require('./api/routes/user.routes');
-//Ejecutamos la funcion que conecta con la db
+//fucntion to connect db
 connect();
 
-// Configuración de express
+// Config express
 const app = express();
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({
@@ -20,18 +20,18 @@ app.use(bodyParser.urlencoded({
 }));
 app.use(cors());
 
-// Aquí indicamos las rutas a usar
+// Routes to use
 app.use('/public', express.static('public'));
 
 app.use('/api', api)
 
-// Definimos el puerto desde el dotenv y si no lo hubiera el 5000
+// Define port or used 5000
 const port = process.env.PORT || 5000;
 const server = app.listen(port, () => {
     console.log('Connected to port ' + port)
 })
 
-// Manejamos los errores
+// Managing errors
 app.use((req, res, next) => {
     setImmediate(() => {
         next(new Error('Something went wrong'));
