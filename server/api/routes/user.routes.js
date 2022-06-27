@@ -6,7 +6,7 @@ const userSchema = require("../models/user.model");
 const authorize = require("../utils/middlewares/auth");
 const { check, validationResult } = require('express-validator');
 
-// Sign-up
+// Sign-up = new One
 router.post("/register-user",
     [
         check('name')
@@ -50,7 +50,7 @@ router.post("/register-user",
         }
     });
 
-// Sign-in
+// Sign-in = loggin
 router.post("/signin", (req, res, next) => {
     let getUser;
     userSchema.findOne({
@@ -89,7 +89,7 @@ router.post("/signin", (req, res, next) => {
     });
 });
 
-// Get Users
+// Get all Users
 router.route('/').get((req, res) => {
     userSchema.find((error, response) => {
         if (error) {
