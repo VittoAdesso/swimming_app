@@ -7,7 +7,7 @@ const authorize = require("../utils/middlewares/auth");
 const { check, validationResult } = require('express-validator');
 
 // Sign-up = new One
-router.post("/register-user",
+router.post("/signup",
     [
         check('name')
             .not()
@@ -78,6 +78,7 @@ router.post("/signin", (req, res, next) => {
             expiresIn: "1h"
         });
         res.status(200).json({
+            //rember i used it in the front to work signin
             token: jwtToken,
             expiresIn: 3600,
             _id: getUser._id
