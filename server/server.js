@@ -7,26 +7,28 @@ const bodyParser = require('body-parser');
 //Import connection to db
 const { connect } = require("./api/utils/database/connect");
 
-// Express APIs
-const api = require('./api/routes/user.routes');
+// Express APIs, require files of routes 
+const user = require('./api/routes/user.routes');
 //fucntion to connect db
 connect();
 
 // Config express
 const app = express();
+//methods of express -- i want json and codify
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({
     extended: false
 }));
+// cors == to see into port or url 
 app.use(cors());
 
 // Routes to use
 app.use('/public', express.static('public'));
 
-app.use('/api', api)
+app.use('/api', user)
 
 // Define port or used 5000
-const port = process.env.PORT || 5000;
+const port = process.env.PORT || 5200;
 const server = app.listen(port, () => {
     console.log('Connected to port ' + port)
 })

@@ -29,6 +29,7 @@ router.post("/register-user",
             return res.status(422).jsonp(errors.array());
         }
         else {
+            //haseha password == encripta =>RECOMENDED
             bcrypt.hash(req.body.password, 10).then((hash) => {
                 const user = new userSchema({
                     name: req.body.name,
@@ -49,7 +50,6 @@ router.post("/register-user",
         }
     });
 
-
 // Sign-in
 router.post("/signin", (req, res, next) => {
     let getUser;
@@ -62,6 +62,7 @@ router.post("/signin", (req, res, next) => {
             });
         }
         getUser = user;
+        // COMPARE BOTH PASSWORD TO CONFIRM
         return bcrypt.compare(req.body.password, user.password);
     }).then(response => {
         if (!response) {
@@ -69,6 +70,7 @@ router.post("/signin", (req, res, next) => {
                 message: "Authentication failed"
             });
         }
+        //generate a token with library
         let jwtToken = jwt.sign({
             email: getUser.email,
             userId: getUser._id
@@ -124,7 +126,6 @@ router.route('/update-user/:id').put((req, res, next) => {
         }
     })
 })
-
 
 // Delete User
 router.route('/delete-user/:id').delete((req, res, next) => {
