@@ -7,6 +7,7 @@ import { MenuComponent } from './core/components/menu/menu.component';
 
 
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
+import { AuthInterceptor } from './core/services/interceptors/authconfig.interceptor';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,14 @@ import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
     HttpClientModule
     
   ],
-  providers: [],
+  providers: [
+    {
+      // to use & intercept urls with token is a class
+    provide: HTTP_INTERCEPTORS,
+    useClass: AuthInterceptor,
+    multi: true
+    }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
