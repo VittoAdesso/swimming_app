@@ -34,7 +34,7 @@ router.post("/signup",
                 const user = new userSchema({
                     name: req.body.name,
                     email: req.body.email,
-                    password: hash,
+                    password: hash
                 });
                 user.save().then((response) => {
                     res.status(201).json({

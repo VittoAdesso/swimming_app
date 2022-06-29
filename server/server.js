@@ -9,6 +9,7 @@ const { connect } = require("./api/utils/database/connect");
 
 // Express APIs, require files of routes 
 const user = require('./api/routes/user.routes');
+const croll = require('./api/routes/croll.routes');
 //fucntion to connect db
 connect();
 
@@ -25,7 +26,9 @@ app.use(cors());
 // Routes to use
 app.use('/public', express.static('public'));
 
-app.use('/api', user)
+//pages routes
+app.use('/api', user);
+app.use('/api', croll);
 
 // Define port or used 5000
 const port = process.env.PORT || 5200;
