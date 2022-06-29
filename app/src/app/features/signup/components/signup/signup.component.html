@@ -1,4 +1,58 @@
+<!-- 
 <div class="form-container">
+    <form [formGroup]="signupForm" (ngSubmit)="registerUser()">
+        <h3>Please sign up</h3>
+
+<div class="field">
+    <label class="label">Name</label>
+    <div class="control">
+      <input class="input" type="text" placeholder="Text input">
+    </div>
+  </div>
+  
+  <div class="field">
+    <label class="label">Email</label>
+    <div class="control has-icons-left has-icons-right">
+        <input type="text" class="input is-danger form-control" type="email" formControlName="name" placeholder="Email input" value="" required>
+   
+        <span class="icon is-small is-left">
+        
+        <i class="fas fa-envelope"></i>
+      </span>
+      <span class="icon is-small is-right">
+        <i class="fas fa-exclamation-triangle"></i>
+      </span>
+    </div>
+    <p class="help is-danger">This email is invalid</p>
+  </div>
+
+  <div class="field">
+    <label class="label">Password</label>
+    <div class="control has-icons-left has-icons-right">
+        <input type="password" class="input is-danger form-control" formControlName="password" placeholder="Password" required>
+            <span class="icon is-small is-left">
+        <i class="fas fa-envelope"></i>
+      </span>
+      <span class="icon is-small is-right">
+        <i class="fas fa-exclamation-triangle"></i>
+      </span>
+    </div>
+    <p class="help is-danger">This password is invalid</p>
+  </div>
+  
+   
+  <div class="field is-grouped">
+    <div class="control">
+      <button class="button is-link" type="submit">Submit</button>
+    </div>
+    <div class="control">
+      <button class="button is-link is-light">Cancel</button>
+    </div>
+  </div>
+</form>
+</div> -->
+
+<div>
     <form [formGroup]="signupForm" (ngSubmit)="registerUser()">
         <h3>Please sign up</h3>
         <div>
@@ -13,6 +67,7 @@
             <label>Password</label>
             <input type="password" class="form-control" formControlName="password" placeholder="Password" required>
         </div>
-            <button type="submit">Sign up</button>
+        
+        <button type="submit">Sign up</button>
     </form>
 </div>
