@@ -1,1 +1,34 @@
-<p>menu works!</p>
+<a class="title-container" routerLinkActive="active" routerLink="">
+    <!-- <img src="../../../../assets/imgs/name.png" alt="Stay/Awake name"> -->
+    <p>HOME</p>
+</a>
+
+<nav>
+   <a class="logo-container" *ngIf="this.authService.isLoggedIn" routerLinkActive="active" routerLink="croll">
+        <!-- <img src="../../../../assets/imgs/podcast-logo.png" alt="Stay/Awake Logo animated"> -->
+        <p>Crol</p>
+    </a>
+    <a class="logo-container" *ngIf="this.authService.isLoggedIn" routerLinkActive="active" routerLink="back">
+        <!-- <img src="../../../../assets/imgs/podcast-logo.png" alt="Stay/Awake Logo animated"> -->
+        <p>Back</p>
+    </a><a class="logo-container" *ngIf="this.authService.isLoggedIn" routerLinkActive="active" routerLink="butterfly">
+        <!-- <img src="../../../../assets/imgs/podcast-logo.png" alt="Stay/Awake Logo animated"> -->
+        <p>Butterfly</p>
+    </a><a class="logo-container" *ngIf="this.authService.isLoggedIn" routerLinkActive="active" routerLink="frog">
+        <!-- <img src="../../../../assets/imgs/podcast-logo.png" alt="Stay/Awake Logo animated"> -->
+        <p>Frog</p>
+    </a>
+    <a class="logo-container" (click)="logout()" role="button" *ngIf="this.authService.isLoggedIn" routerLink="home">
+        <img src="../../../../assets/menuImgs/exit.png" alt="LogOut">
+        <p>LogOut</p>
+    </a>
+    <!-- <a *ngIf="this.authService.isLoggedIn">User Profile</a> -->
+    <a class="logo-container" *ngIf="! this.authService.isLoggedIn" routerLinkActive="active" routerLink="signin">
+        <img src="../../../../assets/menuImgs/signin.png" alt="signin">
+        <!-- <p>SignIn</p> -->
+    </a>
+    <a class="logo-container" *ngIf="! this.authService.isLoggedIn" routerLinkActive="active" routerLink="signup">
+        <img src="../../../../assets/menuImgs/signup.png" alt="signin">
+        <!-- <p>SignUp</p> -->
+    </a>
+</nav>

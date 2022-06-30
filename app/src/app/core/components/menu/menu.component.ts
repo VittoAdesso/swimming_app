@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AuthService } from '../../services/auth.service';
 
 @Component({
   selector: 'app-menu',
@@ -7,9 +8,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MenuComponent implements OnInit {
 
-  constructor() { }
-
+  constructor(public authService: AuthService) { }  
+  
   ngOnInit(): void {
+    // throw new Error('Method not implemented.');
   }
 
+  public logout() {
+    this.authService.doLogout();
+  }
 }
