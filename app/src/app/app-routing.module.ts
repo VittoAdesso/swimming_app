@@ -26,7 +26,7 @@ const routes: Routes = [
     {
       path: `croll`, loadChildren: () =>
         import('./features/croll/croll.module').then(m => m.CrollModule),
-        // canActivate: [AuthGuard]
+        canActivate: [AuthGuard]
     },
     {
       path: `butterfly`, loadChildren: () =>

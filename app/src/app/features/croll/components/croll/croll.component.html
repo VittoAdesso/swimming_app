@@ -1,1 +1,8 @@
-<p>croll works!</p>
+<ul class="">
+    <li *ngFor="let crol of crolStyles; let index = index">
+        <p>{{crol.title}}</p>
+        <div class="" >
+            <img src="{{crol.img}}" alt="{{crol.title}}">
+        </div>
+    </li>
+</ul>

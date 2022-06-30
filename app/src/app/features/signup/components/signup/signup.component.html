@@ -1,30 +1,35 @@
 <!-- 
 <div class="form-container">
     <form [formGroup]="signupForm" (ngSubmit)="registerUser()">
-        <h3>Please sign up</h3>
+        <h1>Please sign up</h1>
 
-<div class="field">
-    <label class="label">Name</label>
-    <div class="control">
-      <input class="input" type="text" placeholder="Text input">
-    </div>
-  </div>
+        <div class="field">
+          <label class="label">Username</label>
+          <div class="control has-icons-left has-icons-right">
+            <input class="input is-success form-control" type="text" placeholder="Text input" value="bulma"  formControlName="name">
+            <span class="icon is-small is-left">
+              <i class="fas fa-user"></i>
+            </span>
+            <span class="icon is-small is-right">
+              <i class="fas fa-check"></i>
+            </span>
+          </div>
+          <p class="help is-success">This username is available</p>
+        </div>
   
-  <div class="field">
-    <label class="label">Email</label>
-    <div class="control has-icons-left has-icons-right">
-        <input type="text" class="input is-danger form-control" type="email" formControlName="name" placeholder="Email input" value="" required>
-   
-        <span class="icon is-small is-left">
-        
-        <i class="fas fa-envelope"></i>
-      </span>
-      <span class="icon is-small is-right">
-        <i class="fas fa-exclamation-triangle"></i>
-      </span>
-    </div>
-    <p class="help is-danger">This email is invalid</p>
-  </div>
+        <div class="field">
+          <label class="label">Email</label>
+          <div class="control has-icons-left has-icons-right">
+            <input class="input is-danger form-control" type="email" placeholder="Email input" value="hello@" formControlName="email">
+            <span class="icon is-small is-left">
+              <i class="fas fa-envelope"></i>
+            </span>
+            <span class="icon is-small is-right">
+              <i class="fas fa-exclamation-triangle"></i>
+            </span>
+          </div>
+          <p class="help is-danger">This email is invalid</p>
+        </div>
 
   <div class="field">
     <label class="label">Password</label>
@@ -50,7 +55,7 @@
     </div>
   </div>
 </form>
-</div> -->
+</div>  -->
 
 <div>
     <form [formGroup]="signupForm" (ngSubmit)="registerUser()">
@@ -70,4 +75,4 @@
         
         <button type="submit">Sign up</button>
     </form>
-</div>
+</div> 
