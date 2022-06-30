@@ -4,7 +4,11 @@ import { AuthGuard } from './core/guards/auth.guard';
 
 //used lazyloading
 const routes: Routes = [
-  {
+    {
+    path: ``, loadChildren: () =>
+    import('./features/home/home.module').then(m => m.HomeModule)
+    },
+    {
       path: `signup`, loadChildren: () =>
       import('./features/signup/signup.module').then(m => m.SignupModule)
     },
