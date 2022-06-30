@@ -4,7 +4,7 @@ const CrollSchema = require("../models/croll.model");
 const authorize = require("../utils/middlewares/auth");
 
 
-// Get All Podcasts
+// Get All stykes
 router.route('/croll').get(authorize, (req, res, next) => {
     CrollSchema.find((error, response) => {
         if (error) {
@@ -16,14 +16,3 @@ router.route('/croll').get(authorize, (req, res, next) => {
 })
 
 module.exports = router;
-
-
-
-// //importo las funciones que crearé
-// const { getAllEstilosLibres, getEstiloLibreId} = require("../controller/libre.controller"); 
-
-// //definimos métodos y método del controlador con las rutas (revisa carpeta controller)
-// router.get("/", getAllEstilosLibres); 
-// router.get("/:libreId", getEstiloLibreId); 
-
-

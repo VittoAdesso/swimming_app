@@ -10,7 +10,6 @@ const CrollSchema = new Schema({
     link: { type: String }, 
 }, 
 {
-    // timestamps: true,
     collection: 'croll' 
 }
 ); 
