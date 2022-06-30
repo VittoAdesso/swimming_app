@@ -11,6 +11,7 @@ import { AuthService } from 'src/app/core/services/auth.service';
 export class SigninComponent implements OnInit {
 
   public signinForm: FormGroup;
+  public submitted: boolean = false;
 
   constructor(
     public fb: FormBuilder,
@@ -27,5 +28,7 @@ ngOnInit() { /*empty*/}
 
   public loginUser() {
     this.authService.signIn(this.signinForm.value)
+    this.signinForm.reset();
+	  this.submitted = false;
   }
 }
