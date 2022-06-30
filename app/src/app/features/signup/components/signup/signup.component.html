@@ -1,78 +1,71 @@
-<!-- 
+
 <div class="form-container">
     <form [formGroup]="signupForm" (ngSubmit)="registerUser()">
-        <h1>Please sign up</h1>
+      
+    <div class="title">
+      <h3>SIGN UP</h3>
+    </div>
 
-        <div class="field">
-          <label class="label">Username</label>
+      <div class="field">
+        <label class="label">Username</label>
           <div class="control has-icons-left has-icons-right">
-            <input class="input is-success form-control" type="text" placeholder="Text input" value="bulma"  formControlName="name">
-            <span class="icon is-small is-left">
-              <i class="fas fa-user"></i>
-            </span>
-            <span class="icon is-small is-right">
-              <i class="fas fa-check"></i>
-            </span>
-          </div>
-          <p class="help is-success">This username is available</p>
+            <input class="input is-success form-control" type="text" placeholder="Insert your userName 🏋️‍♀️" value="bulma"  formControlName="name">
+        <span class="icon is-small is-left">
+            <i class="fas fa-user"></i>
+        </span>
+        <span class="icon is-small is-right">
+            <i class="fas fa-check"></i>
+        </span>
+      </div>
+        <div class="help is-success" *ngIf="!signupForm.get('name')?.valid && (signupForm.get('name')?.dirty || submitted)">
+        <p>Name must be between 3 and 35 characters</p>
         </div>
+    </div>
   
-        <div class="field">
-          <label class="label">Email</label>
-          <div class="control has-icons-left has-icons-right">
-            <input class="input is-danger form-control" type="email" placeholder="Email input" value="hello@" formControlName="email">
-            <span class="icon is-small is-left">
-              <i class="fas fa-envelope"></i>
-            </span>
-            <span class="icon is-small is-right">
-              <i class="fas fa-exclamation-triangle"></i>
-            </span>
-          </div>
-          <p class="help is-danger">This email is invalid</p>
+    <div class="field">
+      <label class="label">Email</label>
+        <div class="control has-icons-left has-icons-right">
+            <input class="input is-danger form-control" type="email" placeholder="Write your mail 📧" value="hello@" formControlName="email">
+          <span class="icon is-small is-left">
+            <i class="fas fa-envelope"></i>
+          </span>
+          <span class="icon is-small is-right">
+            <i class="fas fa-exclamation-triangle"></i>
+          </span>
         </div>
+          <div class="help is-danger" *ngIf="!signupForm.get('email')?.valid && (signupForm.get('email')?.dirty || submitted)">
+          <p>Invalid email</p>
+          </div>
+    </div>
 
   <div class="field">
     <label class="label">Password</label>
-    <div class="control has-icons-left has-icons-right">
-        <input type="password" class="input is-danger form-control" formControlName="password" placeholder="Password" required>
-            <span class="icon is-small is-left">
-        <i class="fas fa-envelope"></i>
-      </span>
-      <span class="icon is-small is-right">
-        <i class="fas fa-exclamation-triangle"></i>
-      </span>
-    </div>
-    <p class="help is-danger">This password is invalid</p>
+      <div class="control has-icons-left has-icons-right">
+        <input type="password" class="input is-danger form-control" formControlName="password" placeholder="Last step 🔚" required>
+          <span class="icon is-small is-left">
+          <i class="fas fa-envelope"></i>
+          </span>
+        <span class="icon is-small is-right">
+          <i class="fas fa-exclamation-triangle"></i>
+        </span>
+      </div>
+        <div class="help is-danger" *ngIf="!signupForm.get('password')?.valid && (signupForm.get('password')?.dirty || submitted)">
+        <p>Invalid password, must have min length of 3 positions</p>
+        </div>
   </div>
-  
-   
+
   <div class="field is-grouped">
     <div class="control">
-      <button class="button is-link" type="submit">Submit</button>
+      <button class="button is-link" type="submit" [disabled]="!signupForm?.valid" >Submit</button>
     </div>
     <div class="control">
       <button class="button is-link is-light">Cancel</button>
     </div>
+    
   </div>
-</form>
-</div>  -->
 
-<div>
-    <form [formGroup]="signupForm" (ngSubmit)="registerUser()">
-        <h3>Please sign up</h3>
-        <div>
-            <label>Name</label>
-            <input type="text" class="form-control" formControlName="name" placeholder="Enter name" required>
-        </div>
-        <div>
-            <label>Email address</label>
-            <input type="email" class="form-control" formControlName="email" placeholder="Enter email" required>
-        </div>
-        <div>
-            <label>Password</label>
-            <input type="password" class="form-control" formControlName="password" placeholder="Password" required>
-        </div>
-        
-        <button type="submit">Sign up</button>
-    </form>
+  <p class="field-primary">Already have an account?</p>
+    <a href="/signin"><h4>Signin</h4></a>
+
+</form>
 </div> 
