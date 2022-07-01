@@ -20,7 +20,6 @@
     </a>
     <a class="logo-container" (click)="logout()" role="button" *ngIf="this.authService.isLoggedIn" routerLink="home">
         <img src="../../../../assets/menuImgs/exit.png" alt="LogOut">
-        <p>LogOut</p>
     </a>
     <!-- <a *ngIf="this.authService.isLoggedIn">User Profile</a> -->
     <a class="logo-container" *ngIf="! this.authService.isLoggedIn" routerLinkActive="active" routerLink="signin">

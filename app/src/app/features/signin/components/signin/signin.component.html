@@ -1,46 +1,27 @@
-    
-    <div class="form-container">
+<div class="form-container">
     <form [formGroup]="signinForm" (ngSubmit)="loginUser()">
-      
     <div class="title">
       <h3>SIGNIN</h3>
     </div>
 
-      <div class="field">
-      <label class="label">Email</label>
+    <div class="field">
+        <label class="label">Email</label>
         <div class="control has-icons-left has-icons-right">
-            <input class="input is-rounded" type="email" placeholder="Write your mail 📧" value="hello@" formControlName="email">
-          <span class="icon is-small is-left">
-            <i class="fas fa-envelope"></i>
-          </span>
-          <span class="icon is-small is-right">
-            <i class="fas fa-exclamation-triangle"></i>
-          </span>
+            <input class="input is-rounded" type="email" placeholder="Write your mail 📧" value="" formControlName="email">
         </div>
-       
     </div>
 
-  <div class="field">
-    <label class="label">Password</label>
-      <div class="control has-icons-left has-icons-right">
-        <input type="password" class="input is-rounded" formControlName="password" placeholder="Last step 🔚" required>
-          <span class="icon is-small is-left">
-          <i class="fas fa-envelope"></i>
-          </span>
-        <span class="icon is-small is-right">
-          <i class="fas fa-exclamation-triangle"></i>
-        </span>
-      </div>
-       
-  </div>
-
-  <div class="field is-grouped">
-    <div class="control">
-      <button class="button is-success is-light" type="submit" [disabled]="!signinForm?.valid" >Submit</button>
+    <div class="field">
+        <label class="label">Password</label>
+        <div class="control has-icons-left has-icons-right">
+            <input type="password" class="input is-rounded" formControlName="password" placeholder="Last step 🔚" required>
+        </div>
     </div>
-    
-  </div>
 
-
-</form>
+    <div class="field is-grouped">
+        <div class="control">
+        <button class="button is-success is-light" type="submit" [disabled]="!signinForm?.valid" >Submit</button>
+        </div>
+    </div>
+    </form>
 </div> 
