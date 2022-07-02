@@ -8,11 +8,13 @@ import { MenuComponent } from './core/components/menu/menu.component';
 
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { AuthInterceptor } from './core/services/interceptors/authconfig.interceptor';
+import { CrollComponent } from './features/croll/components/croll/croll.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    MenuComponent
+    MenuComponent, 
+    
   ],
   imports: [
     BrowserModule,

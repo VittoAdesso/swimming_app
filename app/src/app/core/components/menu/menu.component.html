@@ -1,33 +1,107 @@
-<a class="title-container" routerLinkActive="active" routerLink="">
-    <!-- <img src="../../../../assets/imgs/name.png" alt="Stay/Awake name"> -->
-    <p>HOME</p>
-</a>
+<!-- <a class="title-container" routerLinkActive="active" routerLink="">
+      <img src="../../../../assets/imgs/name.png" alt="Stay/Awake name">  -->
+    <!-- <p>Home</p>
+</a> -->
 
-<nav>
-   <a class="logo-container" *ngIf="this.authService.isLoggedIn" routerLinkActive="active" routerLink="croll">
-        <!-- <img src="../../../../assets/imgs/podcast-logo.png" alt="Stay/Awake Logo animated"> -->
-        <p>Crol</p>
-    </a>
-    <a class="logo-container" *ngIf="this.authService.isLoggedIn" routerLinkActive="active" routerLink="back">
-        <!-- <img src="../../../../assets/imgs/podcast-logo.png" alt="Stay/Awake Logo animated"> -->
-        <p>Back</p>
-    </a><a class="logo-container" *ngIf="this.authService.isLoggedIn" routerLinkActive="active" routerLink="butterfly">
-        <!-- <img src="../../../../assets/imgs/podcast-logo.png" alt="Stay/Awake Logo animated"> -->
-        <p>Butterfly</p>
-    </a><a class="logo-container" *ngIf="this.authService.isLoggedIn" routerLinkActive="active" routerLink="frog">
-        <!-- <img src="../../../../assets/imgs/podcast-logo.png" alt="Stay/Awake Logo animated"> -->
-        <p>Frog</p>
-    </a>
-    <a class="logo-container" (click)="logout()" role="button" *ngIf="this.authService.isLoggedIn" routerLink="home">
-        <img src="../../../../assets/menuImgs/exit.png" alt="LogOut">
-    </a>
-    <!-- <a *ngIf="this.authService.isLoggedIn">User Profile</a> -->
+
+<!-- <div class="hamburger-menu">
+    <input id="menu__toggle" type="checkbox" />
+    <label class="menu__btn" for="menu__toggle">
+      <span></span>
+    </label>
+
+    <ul class="menu__box">
+        
+      <li><a class="menu__item" routerLinkActive="active" routerLink="">Home</a></li>
+
+      <li><a class="menu__item" *ngIf="this.authService.isLoggedIn" routerLinkActive="active" routerLink="croll">Crol</a></li>
+    
+      <li><a class="menu__item" *ngIf="this.authService.isLoggedIn" routerLinkActive="active" routerLink="back">Back</a></li>
+
+      <li><a class="menu__item" *ngIf="this.authService.isLoggedIn" routerLinkActive="active" routerLink="butterfly">Butterfly</a></li>
+
+      <li><a class="menu__item" *ngIf="this.authService.isLoggedIn" routerLinkActive="active" routerLink="frog">Frog</a></li>
+
+     
+    </ul>
+  </div>
+
+
+ 
+  <nav>
+   
     <a class="logo-container" *ngIf="! this.authService.isLoggedIn" routerLinkActive="active" routerLink="signin">
         <img src="../../../../assets/menuImgs/signin.png" alt="signin">
-        <!-- <p>SignIn</p> -->
+       
     </a>
     <a class="logo-container" *ngIf="! this.authService.isLoggedIn" routerLinkActive="active" routerLink="signup">
         <img src="../../../../assets/menuImgs/signup.png" alt="signin">
-        <!-- <p>SignUp</p> -->
+        
     </a>
-</nav>
+
+    
+  <a class="logo-container" (click)="logout()" role="button" *ngIf="this.authService.isLoggedIn" routerLink="home">
+    <img src="../../../../assets/menuImgs/exit.png" alt="LogOut">
+</a>
+</nav>  -->
+
+<nav class="navbar" role="navigation" aria-label="main navigation">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="https://bulma.io">
+        <img src="https://bulma.io/images/bulma-logo.png" width="112" height="28">
+      </a>
+  
+      <a role="button" class="navbar-burger " aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </a>
+    </div>
+  
+    <div id="navbarBasicExample" class="navbar-menu">
+      <div class="navbar-start">
+        <a class="navbar-item">
+          Home
+        </a>
+  
+        <a class="navbar-item">
+          Documentation
+        </a>
+  
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link">
+            More
+          </a>
+  
+          <div class="navbar-dropdown">
+            <a class="navbar-item">
+              About
+            </a>
+            <a class="navbar-item">
+              Jobs
+            </a>
+            <a class="navbar-item">
+              Contact
+            </a>
+            <hr class="navbar-divider">
+            <a class="navbar-item">
+              Report an issue
+            </a>
+          </div>
+        </div>
+      </div>
+  
+      <div class="navbar-end">
+        <div class="navbar-item">
+          <div class="buttons">
+            <a class="button is-primary" *ngIf="! this.authService.isLoggedIn" routerLinkActive="active" routerLink="signup">
+              <strong>Sign up</strong>
+            </a>
+            <a class="button is-light" *ngIf="! this.authService.isLoggedIn" routerLinkActive="active" routerLink="signin">
+              Log in
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>

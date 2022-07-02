@@ -11,7 +11,7 @@ import { CrollComponent } from './components/croll/croll.component';
   ],
   imports: [
     CommonModule,
-    CrollRoutingModule
+    CrollRoutingModule,
   ]
 })
 export class CrollModule { }
