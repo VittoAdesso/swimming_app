@@ -15,12 +15,13 @@
   
     <div id="navbarMobile" class="navbar-menu" #navMenu click="">
       <div class="navbar-start">
+      <!-- ALWAYS SHOW THE LINK, THE USER DONT HAVE TO STAY LOG IN OR REGISTER (so always show)  -->
         <a class="navbar-item " href="">
           Home
         </a>
-        <!-- ALWAYS SHOW THE LINK, THE USER DONT HAVE TO STAY LOG IN OR REGISTER (so always show)  -->
+   
         <a class="navbar-item" href="/croll"
-        *ngIf="! this.authService.isLoggedIn">
+        *ngIf=" this.authService.isLoggedIn">
           Libre
         </a>
   
@@ -56,11 +57,14 @@
       <div class="navbar-end">
         <div class="navbar-item">
           <div class="buttons">
-            <a class="button is-primary is-light" routerLinkActive="active" routerLink="signup">
-              <strong>Sign up</strong>
+            <a class="button is-primary is-light" routerLinkActive="active" routerLink="signup" *ngIf="! this.authService.isLoggedIn">
+              Registrarse
             </a>
             <a class="button is-light is-info" *ngIf="! this.authService.isLoggedIn" routerLinkActive="active" routerLink="signin">
-              Log in
+              <strong>Inicia sesión</strong>
+            </a>
+            <a class="button is-light is-danger" (click)="logout()" *ngIf=" this.authService.isLoggedIn" routerLinkActive="active" routerLink="signin">
+              Cierra sesión
             </a>
           </div>
         </div>
