@@ -8,7 +8,9 @@ import { AuthService } from '../../services/auth.service';
 })
 export class MenuComponent implements OnInit {
 
-  constructor(public authService: AuthService) { }  
+  constructor(public authService: AuthService) {
+    
+   }  
   
   ngOnInit(): void {
     // throw new Error('Method not implemented.');
@@ -17,4 +19,6 @@ export class MenuComponent implements OnInit {
   public logout() {
     this.authService.doLogout();
   }
+
+  
 }
