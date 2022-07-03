@@ -30,5 +30,6 @@ ngOnInit() { /*empty*/}
     this.authService.signIn(this.signinForm.value)
     this.signinForm.reset();
 	  this.submitted = false;
+    this.router.navigate([""])
   }
 }
