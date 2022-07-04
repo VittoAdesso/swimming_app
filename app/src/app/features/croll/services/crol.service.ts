@@ -25,7 +25,7 @@ export class CrolService {
     )
   }
 
-    // Error 
+    // extra to manage error
     handleError(error: HttpErrorResponse) {
       let msg = '';
       if (error.error instanceof ErrorEvent) {
