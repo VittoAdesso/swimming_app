@@ -1,8 +1,13 @@
-<div class="font-description" *ngFor="let crol of crolStyles" >
-    <p> {{crol.description}}</p>
-</div>
-
 <div class="gif-img">
     <img src="../../../../../assets/crolPage/crol.gif" alt="">
 </div>
 
+<div class="font-description" *ngFor="let crol of crolStyles" >
+    <p> {{crol.description}}</p>
+</div>
+
+<div class="img-gallery" >
+    <div class="ij" *ngFor="let crol of crolStyles">
+        <img src="{{crol.img}}">
+    </div>
+</div>
