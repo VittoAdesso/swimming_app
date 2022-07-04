@@ -8,7 +8,9 @@ Created bbdd with mongoDb
 Used Framework Angular v-13
 Used styles
 sass
-bulma
+bulma.io
+googleFonts
+
 
 to run server 
 `npm run dev`
