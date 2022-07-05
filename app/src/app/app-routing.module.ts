@@ -41,6 +41,9 @@ const routes: Routes = [
       path: `frog`, loadChildren: () =>
         import('./features/frog/frog.module').then(m => m.FrogModule),
         canActivate: [AuthGuard]
+    },{
+      path: `accesories`, loadChildren: () =>
+        import('./features/accesories/accesories.module').then(m => m.AccesoriesModule),
     },
 ];
 
