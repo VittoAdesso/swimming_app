@@ -12,6 +12,7 @@ const user = require('./api/routes/user.routes');
 const croll = require('./api/routes/croll.routes');
 const back = require('./api/routes/back.routes');
 const butterfly = require('./api/routes/butterfly.routes');
+const frog = require('./api/routes/frog.routes');
 //fucntion to connect db
 connect();
 
@@ -33,6 +34,7 @@ app.use('/api', user);
 app.use('/api', croll);
 app.use('/api', back);
 app.use('/api', butterfly);
+app.use('/api', frog);
 
 // Define port or used 5000
 const port = process.env.PORT || 5200;
