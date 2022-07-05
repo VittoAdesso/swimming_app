@@ -7,11 +7,15 @@ import { MenuComponent } from './core/components/menu/menu.component';
 
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { AuthInterceptor } from './core/services/interceptors/authconfig.interceptor';
+import { AccesoriesComponent } from './features/accesories/accesories.component';
+import { GalleryComponent } from './features/gallery/gallery.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    MenuComponent, 
+    MenuComponent,
+    AccesoriesComponent,
+    GalleryComponent, 
     
   ],
   imports: [
