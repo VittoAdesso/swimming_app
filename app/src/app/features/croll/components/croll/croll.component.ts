@@ -16,7 +16,7 @@ export class CrollComponent implements OnInit, OnDestroy {
   protected readonly clearSubscriptions$ = new Subject(); // only can read
   
   constructor(public crolService: CrolService, 
-  ) { }
+  ) { /* empty */ }
 
   ngOnDestroy(): void {
     this.clearSubscriptions$.complete();

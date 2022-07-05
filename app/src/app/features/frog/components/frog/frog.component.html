@@ -1,1 +1,13 @@
-<p>frog works!</p>
+<div class="gif-img">
+    <img src="../../../../../assets/frogPage/frog.gif" alt="">
+</div>
+
+<div class="font-description" *ngFor="let frog of frogStyles" >
+    <p> {{frog.description}}</p>
+</div>
+
+<div class="img-gallery" >
+    <div class="ij" *ngFor="let frog of frogStyles">
+        <img src="{{frog.img}}">
+    </div>
+</div>

@@ -8,16 +8,16 @@ import { Router } from '@angular/router';
   providedIn: 'root'
 })
 
-export class CrolService {
+export class FrogService {
 
   endpoint: string = 'http://localhost:5200/api';
   headers = new HttpHeaders().set('Content-Type', 'application/json');
 
-  constructor(private http: HttpClient,
-              public router: Router) {  /* empty */ }
+  constructor(private http: HttpClient, 
+              public router: Router) { /* empty */ }
 
-  getStyleCrol(): Observable<any> {
-    let api = `${this.endpoint}/croll/`;
+  getStyleFrog(): Observable<any> {
+    let api = `${this.endpoint}/frog/`;
     return this.http.get(api, { headers: this.headers }).pipe(
       map((res: any) => {
         return res || {}
