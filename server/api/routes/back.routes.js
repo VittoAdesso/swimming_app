@@ -1,12 +1,12 @@
 const express = require("express");
 const router = express.Router();
-const CrollSchema = require("../models/croll.model");
+const BackSchema = require("../models/back.model");
 const authorize = require("../utils/middlewares/auth");
 
 
 // Get All styles
-router.route('/croll').get(authorize, (req, res, next) => {
-    CrollSchema.find((error, response) => {
+router.route('/back').get(authorize, (req, res, next) => {
+    BackSchema.find((error, response) => {
         if (error) {
             return next(error)
         } else {
