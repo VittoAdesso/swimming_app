@@ -1,1 +1,13 @@
-<p>butterfly works!</p>
+<div class="gif-img">
+    <img src="../../../../../assets/butterflyPage/butterfly.gif" alt="">
+</div>
+
+<div class="font-description" *ngFor="let butterfly of butterflyStyles" >
+    <p> {{butterfly.description}}</p>
+</div>
+
+<div class="img-gallery" >
+    <div class="ij" *ngFor="let butterfly of butterflyStyles">
+        <img src="{{butterfly.img}}">
+    </div>
+</div>
