@@ -16,11 +16,6 @@ const routes: Routes = [
       path: `signin`, loadChildren: () =>
         import('./features/signin/signin.module').then(m => m.SigninModule)
     },
-    // {
-    //   path: `user`, loadChildren: () =>
-    //     import('./features/user-profile/user-profile.module').then(m => m.UserProfileModule),
-    //     canActivate: [AuthGuard]
-    // },
     {
       path: `back`, loadChildren: () =>
         import('./features/back/back.module').then(m => m.BackModule),
@@ -45,6 +40,10 @@ const routes: Routes = [
       path: `accesories`, loadChildren: () =>
         import('./features/accesories/accesories.module').then(m => m.AccesoriesModule),
     },
+    {
+      path: `arrow`, loadChildren: () =>
+        import('./features/arrow/arrow.module').then(m => m.ArrowModule),
+    }    
 ];
 
 @NgModule({
