@@ -1,1 +1,13 @@
-<p>back works!</p>
+<div class="gif-img">
+    <img src="../../../../../assets/backPage/back.gif" alt="">
+</div>
+
+<div class="font-description" *ngFor="let back of backStyles" >
+    <p> {{back.description}}</p>
+</div>
+
+<div class="img-gallery" >
+    <div class="ij" *ngFor="let back of backStyles">
+        <img src="{{back.img}}">
+    </div>
+</div>
