@@ -40,11 +40,11 @@
               Pecho
             </a>
           
-            <a class="navbar-item" *ngIf=" this.authService.isLoggedIn" href="/butterfly">
+            <a class="navbar-item" *ngIf=" ! this.authService.isLoggedIn" href="/butterfly">
               Mariposa
             </a>
             <hr class="navbar-divider">
-            <a class="navbar-item" href="/accesories">
+            <a class="navbar-item" *ngIf=" this.authService.isLoggedIn" href="/accesories">
               Accesorios
             </a>
             <a class="navbar-item" href="/arrow">
