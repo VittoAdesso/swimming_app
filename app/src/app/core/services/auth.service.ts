@@ -14,8 +14,8 @@ import { Router } from '@angular/router';
 
 export class AuthService { 
   //define port and header to petitions
-  // public endpoint: string = 'http://localhost:5200/api';
-  public endpoint: string = 'https://server-swimmingapp-nodejs.herokuapp.com/';
+  public endpoint: string = 'http://localhost:5200/api';
+  // public endpoint: string = 'https://server-swimmingapp-nodejs.herokuapp.com/';
   private headers = new HttpHeaders().set('Content-Type', 'application/json');
   //HOST the response if signin token + _id + expires
   public currentUser: Object = {} ;
