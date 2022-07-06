@@ -10,7 +10,7 @@ export class HomeComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-    alert('Regístrate o inicia sesión ! ENJOY 🏊')
+    // alert('Regístrate o inicia sesión ! ENJOY 🏊')
   }
 
 }

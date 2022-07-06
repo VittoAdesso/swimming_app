@@ -30,7 +30,7 @@ const routes: Routes = [
     {
       path: `butterfly`, loadChildren: () =>
         import('./features/butterfly/butterfly.module').then(m => m.ButterflyModule),
-        // canActivate: [AuthGuard]
+        canActivate: [AuthGuard]
     },
     {
       path: `frog`, loadChildren: () =>
@@ -39,7 +39,7 @@ const routes: Routes = [
     },{
       path: `accesories`, loadChildren: () =>
         import('./features/accesories/accesories.module').then(m => m.AccesoriesModule),
-        canActivate: [AuthGuard]
+        
     },
     {
       path: `arrow`, loadChildren: () =>
